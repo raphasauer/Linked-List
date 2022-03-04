@@ -1,5 +1,6 @@
 #include <iostream>
 #include "list_node.cpp"
+#include "linked_list.cpp"
 
 int main()
 {
@@ -10,6 +11,13 @@ int main()
 
     free(l1);
     free(l2);
+
+    linked_list *ll = (linked_list *)malloc(sizeof(linked_list));
+
+    std::cout << ll->insert(2) << std::endl;
+    std::cout << ll->insert(2) << std::endl;
+
+    free(ll);
 
     return 0;
 }

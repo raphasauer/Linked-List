@@ -1,6 +1,6 @@
 #include "linked_list.h"
 
-linked_list::linked_list() 
+linked_list::linked_list()
 {
     length = 0;
     head = nullptr;
@@ -8,11 +8,14 @@ linked_list::linked_list()
 
 int linked_list::insert(int data)
 {
-    if(head == nullptr)
+    list_node *aux_ptr = head;
+    for (int i = 0; i < length; i++)
     {
-        list_node* newHead = (list_node*) malloc(sizeof(list_node));
-        newHead->add_data(data);
-        head = newHead;
-        return 0;
+        aux_ptr = aux_ptr->ptr_next;
     }
+    list_node *new_node = (list_node *)malloc(sizeof(list_node));
+    new_node->add_data(data);
+    aux_ptr->add_next(new_node);
+    length++;
+    return length - 1;
 }
