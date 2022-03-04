@@ -1,7 +1,7 @@
 #include "list_node.h"
 
-//TODO: to be implemented
-std::string list_node::to_string()
+list_node::list_node(int data, list_node *ptr_next = nullptr)
 {
-    return "";
+    this->data = data;
+    this->ptr_next = ptr_next;
 }
