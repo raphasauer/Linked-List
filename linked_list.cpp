@@ -10,6 +10,10 @@ int linked_list::insert(int data)
 {
     list_node *aux_ptr;
     list_node *new_node = (list_node *)malloc(sizeof(list_node));
+    
+    if(!new_node)
+        return -1;
+    
     new_node->add_data(data);
 
     if (head == nullptr)
