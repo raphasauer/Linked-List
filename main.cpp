@@ -4,18 +4,12 @@
 
 int main()
 {
-    list_node *l1 = (list_node *)malloc(sizeof(list_node));
-    list_node *l2 = (list_node *)malloc(sizeof(list_node));
-
-    l1->add_next(l2);
-
-    free(l1);
-    free(l2);
-
     linked_list *ll = (linked_list *)malloc(sizeof(linked_list));
 
-    std::cout << ll->insert(2) << std::endl;
-    std::cout << ll->insert(2) << std::endl;
+    ll->insert(1); 
+    ll->insert(2);
+
+    ll->output_list();
 
     free(ll);
 

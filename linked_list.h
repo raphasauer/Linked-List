@@ -12,6 +12,8 @@ public:
     ///Returns the index where the element was inserted or -1 if there was an error
     int insert(int data);
     linked_list();
+    ///Outputs the list and its contents to std::cout
+    void output_list();
 };
 
 #endif
