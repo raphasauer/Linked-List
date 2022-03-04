@@ -35,7 +35,7 @@ void linked_list::output_list()
     list_node *aux_ptr = head;
     for (int i = 0; i < length; i++)
     {
-        std::cout << head->data << " ";
+        std::cout << aux_ptr->data << " ";
         aux_ptr = aux_ptr->ptr_next;
     }
     std::cout << "]";
