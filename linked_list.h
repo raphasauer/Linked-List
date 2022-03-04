@@ -14,6 +14,8 @@ public:
     linked_list();
     ///Outputs the list and its contents to std::cout
     void output_list();
+private:
+    list_node* last_valid_ptr();
 };
 
 #endif

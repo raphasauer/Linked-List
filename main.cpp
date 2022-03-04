@@ -6,8 +6,10 @@ int main()
 {
     linked_list *ll = (linked_list *)malloc(sizeof(linked_list));
 
-    ll->insert(1); 
+    ll->insert(1);
     ll->insert(2);
+    ll->insert(1);
+    ll->insert(5);
 
     ll->output_list();
 

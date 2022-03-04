@@ -8,7 +8,7 @@ linked_list::linked_list()
 
 int linked_list::insert(int data)
 {
-    list_node *aux_ptr = head;
+    list_node *aux_ptr;
     list_node *new_node = (list_node *)malloc(sizeof(list_node));
     new_node->add_data(data);
 
@@ -20,9 +20,7 @@ int linked_list::insert(int data)
     }
     else
     {
-        for (int i = 0; i < length - 1; i++)
-            aux_ptr = aux_ptr->ptr_next;
-
+        aux_ptr = last_valid_ptr();
         aux_ptr->add_next(new_node);
         length++;
         return length - 1;
@@ -39,4 +37,12 @@ void linked_list::output_list()
         aux_ptr = aux_ptr->ptr_next;
     }
     std::cout << "]";
+}
+
+list_node* linked_list::last_valid_ptr()
+{
+    list_node *aux_ptr = head;
+    for (int i = 0; i < length - 1; i++)
+        aux_ptr = aux_ptr->ptr_next;
+    return aux_ptr;
 }
