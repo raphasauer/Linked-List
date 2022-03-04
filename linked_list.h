@@ -10,7 +10,7 @@ private:
 public:
     int length;
     ///Returns the index where the element was inserted or -1 if there was an error
-    int insert();
+    int insert(int data);
     linked_list();
 };
 

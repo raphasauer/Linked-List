@@ -11,6 +11,7 @@ class list_node
 
     list_node(int data, list_node* ptr_next = nullptr);
     void add_next(list_node* ptr);
+    void add_data(int new_data);
 };
 
 #endif

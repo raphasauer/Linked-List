@@ -10,3 +10,8 @@ void list_node::add_next(list_node* ptr)
 {
     ptr_next = ptr;
 }
+
+void list_node::add_data(int new_data)
+{
+    data = new_data;
+}

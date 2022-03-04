@@ -8,5 +8,8 @@ int main()
 
     l1->add_next(l2);
 
+    free(l1);
+    free(l2);
+
     return 0;
 }
