@@ -15,7 +15,8 @@ public:
     ///Outputs the list and its contents to std::cout
     void output_list();
 private:
-    list_node* last_valid_ptr();
+    ///Returns the last node of the list
+    list_node* last_node();
 };
 
 #endif
